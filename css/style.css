@@ -23,7 +23,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/Home.png);
+    background-image: url(../images/Home.png); 
     background-size:cover;
     background-position: center;
     padding: 25px 0;
@@ -41,7 +41,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+} 
 nav img{
     cursor: pointer;
     width: 100%;
@@ -52,11 +52,11 @@ nav img{
     width: 140px;
 }
 
-nav ul li{
+ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px ;
-}
+} 
 
 nav ul li a{
     color: white;
@@ -610,7 +610,7 @@ nav ul li a:hover::after{
     background: #06849b;
 }
 /*========contact=======*/
-.row{
+/* .row{
     display: flex;
     flex-direction: row;
 }
@@ -699,7 +699,88 @@ form .btn3:hover{
 .copyright i{
      color: #ffffff26;
 }
+ */
+ #contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-left, 
+.contact-right {
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.contact-left p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #1b87e6;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0ee8d6;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-right input, 
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-right button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background: #16d2b6;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000000;
+}
 
 #msg{
     color: #00b7ff;
@@ -813,3 +894,65 @@ form .btn3:hover{
     }
 }
 
+/* Smartphones (portrait and landscape) */
+@media (max-width: 600px) {
+    .contact-left,
+    .contact-right {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contact-left,
+    .contact-right {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+    .container {
+        padding: 20px;
+    }
+
+    .contact-left h1 {
+        font-size: 28px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}
+
+
+
+/*=========custon-scroll-bar==========*/
+
+::-webkit-scrollbar{
+    width: 15px;
+
+}
+
+::-webkit-scrollbar-track{
+    background: #00b7ff;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff, #ff22e6);
+    border-radius: 10px;
+}
